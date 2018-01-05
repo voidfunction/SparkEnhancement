@@ -1,0 +1,105 @@
+{
+    "extends": [
+        "tslint-eslint-rules"
+    ],
+    "rules": {
+        "no-unused-expression": true,
+        "no-unreachable": true,
+        "no-duplicate-variable": true,
+        "no-duplicate-key": true,
+        "no-unused-variable": true,
+        "curly": true,
+        "class-name": true,
+        "comment-format": [
+            true,
+            "check-space"
+        ],
+        "eofline": true,
+        "forin": false,
+        "indent": [
+            true,
+            "spaces",
+            4
+        ],
+        "interface-name": [
+            true,
+            "always-prefix"
+        ],
+        "jsdoc-format": true,
+        "label-position": true,
+        "max-line-length": [
+            false
+        ],
+        "member-ordering": [
+            false
+        ],
+        "no-arg": true,
+        "no-bitwise": false,
+        "no-construct": true,
+        "no-debugger": true,
+        "no-empty": true,
+        "no-eval": true,
+        "no-string-literal": false,
+        "no-switch-case-fall-through": true,
+        "no-use-before-declare": false,
+        "no-var-requires": true,
+        "one-line": [
+            true,
+            "check-open-brace",
+            "check-catch",
+            "check-else",
+            "check-whitespace"
+        ],
+        "quotemark": [
+            true,
+            "single"
+        ],
+        "radix": true,
+        "semicolon": [
+            true,
+            "always",
+            "ignore-bound-class-methods"
+        ],
+        "trailing-comma": [
+            true,
+            {
+                "multiline": "never",
+                "singleline": "never"
+            }
+        ],
+        "triple-equals": [
+            true,
+            "allow-null-check"
+        ],
+        "typedef": [
+            false
+        ],
+        "typedef-whitespace": [
+            true,
+            {
+                "index-signature": "nospace",
+                "parameter": "nospace",
+                "property-declaration": "nospace",
+                "variable-declaration": "nospace"
+            },
+            {
+                "index-signature": "space",
+                "parameter": "space",
+                "property-declaration": "space",
+                "variable-declaration": "space"
+            }
+        ],
+        "use-strict": [
+            true
+        ],
+        "variable-name": false,
+        "whitespace": [
+            true,
+            "check-branch",
+            "check-decl",
+            "check-operator",
+            "check-separator",
+            "check-type"
+        ]
+    }
+}
