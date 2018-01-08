@@ -2,6 +2,29 @@
 /// <reference path="./node_modules/@types/jquery/index.d.ts" />
 /// <reference path="./node_modules/@types/angular/index.d.ts" />
 
+enum DataTabButtonTye {
+    Download = "download",
+    Preview = "preview",
+    FullPath = "fullPath",
+    ReleativePath = 'releativePath',
+    Unknown = 'unknown'
+}
+
+function getActionEnumType(type: string): DataTabButtonTye {
+    switch (type) {
+        case 'download':
+            return DataTabButtonTye.Download;
+        case 'preview':
+            return DataTabButtonTye.Preview;
+        case 'fullPath':
+            return DataTabButtonTye.FullPath;
+        case 'releativePath':
+            return DataTabButtonTye.ReleativePath;
+        default:
+            return DataTabButtonTye.Unknown;
+    }
+}
+
 class JobInput {
     path: string;
     format: string;
@@ -79,22 +102,65 @@ class SparkInfo {
 let spark: SparkInfo = new SparkInfo();
 let isRendered: boolean = false;
 
-$(() => {
-    window.addEventListener("message", (event) => {
-        if (event.data.data) {
-            spark.data = event.data.data;
-            renderInputAndOutput();
-        }
-    });
+window.addEventListener("message", (event) => {
+    console.log(event);
+    if (event.data.data) {
+        spark.data = event.data.data;
+        renderInputAndOutput();
+    }
 });
+
+$(() => {
+    postIframeReadyMessage();
+});
+
+
+function postIframeReadyMessage() {
+    const message = {
+        eventType: "iframeReady",
+        data: "ready"
+    };
+    window.parent.postMessage(message, '*');
+}
 
 
 function renderInputAndOutput() {
     renderData(spark.data.inputs);
     renderData(spark.data.outputs, false);
+    addButtonClickEvent();
+}
+
+function addButtonClickEvent() {
+    $('.data-tab-button').click((event) => {
+        const actionType: DataTabButtonTye = getActionEnumType(event.target.id);
+        // find the row content
+        const parentRowDom = $(event.target).parentsUntil('tbody');
+        if (parentRowDom.length !== 3) {
+            alert('incorrect row counter!');
+            return;
+        }
+        let columns = $(parentRowDom).children('td');
+        let [inputSetId, format, path] = [columns[0].innerHTML, columns[1].innerHTML, columns[2].innerHTML];
+    });
 }
 
 function renderData(dataSet: Array<Array<string>>, isInput: boolean = true) {
+    dataSet.forEach(elements => {
+        elements.push(`
+        <div class="btn-group">
+            <button type="button" id="download" class="btn btn-default data-tab-button">Download</button>
+            <div class="btn-group">
+                <button type="button" class="data-tab-button btn btn-default dropdown-toggle" data-toggle="dropdown">...<span class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu">
+                <li><button id="preview" class="btn btn-md btn-default data-tab-button">Preview</button></li>
+                <li><button id="fullPath" class="btn btn-md btn-default data-tab-button">Copy Full Path</button></li>
+                <li><button id="releativePath" class="btn btn-md btn-default data-tab-button">Copy Releative Path</button></li>
+                </ul>
+            </div>
+        </div>
+        `);
+    });
+
     let tabId = isInput ? '#inputDataTab' : '#outputDataTab';
     let sortId = isInput ? 0 : 1;
     try {
@@ -118,6 +184,6 @@ function renderData(dataSet: Array<Array<string>>, isInput: boolean = true) {
     } catch (error) {
         console.log(error);
     } finally {
-        let v = 1;
+
     }
 }
