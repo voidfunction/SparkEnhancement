@@ -8,6 +8,7 @@
         "type": "node",
         "request": "launch",
         "name": "Launch Local Web Service", 
+        "preLaunchTask": "pre-build-server",
         "program": "${workspaceFolder}/server/out/localwebservice.js"
     }]
 }
