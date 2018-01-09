@@ -1,6 +1,6 @@
-/// <reference path="./node_modules/@types/knockout/index.d.ts" />
-/// <reference path="./node_modules/@types/jquery/index.d.ts" />
-/// <reference path="./node_modules/@types/angular/index.d.ts" />
+/// <reference path="../node_modules/@types/knockout/index.d.ts" />
+/// <reference path="../node_modules/@types/jquery/index.d.ts" />
+/// <reference path="../node_modules/@types/angular/index.d.ts" />
 
 enum DataTabButtonTye {
     Download = "download",
@@ -145,7 +145,7 @@ function addButtonClickEvent() {
 }
 
 function renderData(dataSet: Array<Array<string>>, isInput: boolean = true) {
-    dataSet.forEach(elements => {
+    dataSet && dataSet.forEach(elements => {
         elements.push(`
         <div class="btn-group">
             <button type="button" id="download" class="btn btn-default data-tab-button">Download</button>
@@ -164,7 +164,7 @@ function renderData(dataSet: Array<Array<string>>, isInput: boolean = true) {
     let tabId = isInput ? '#inputDataTab' : '#outputDataTab';
     let sortId = isInput ? 0 : 1;
     try {
-        $(tabId).DataTable({
+        $(tabId)['DataTable']({
             data: dataSet,
             order: [[sortId, "desc"]],
                     dom: 'Bfrtip',

@@ -1,18 +1,19 @@
 {
-  "name": "knockouttest",
+  "name": "sparkenhancement",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "preinstall": "npm install server"
+    "postinstall": "cd server && npm install"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^3.3.7",
     "jquery": "^1.12.4",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "server": "file:server"
   },
   "devDependencies": {
     "@types/angular": "^1.6.39",

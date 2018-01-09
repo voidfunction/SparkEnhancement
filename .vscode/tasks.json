@@ -6,15 +6,17 @@
         {
             "label": "pre-build-server",
             "type": "shell",
-            "command": "tsc -p server"
+            "command": "tsc -p server",
+            "dependsOn": "htmlScriptBuild"
         },
         {
-            "label": "build",
+            "label": "html Script Build",
+            "identifier": "htmlScriptBuild",
             "type": "shell",
             "command": "tsc -p ."
         }, 
         {
-            "label": "watch",
+            "label": "html Script Watch",
             "type": "shell",
             "command": "tsc -p . -w"
         }
