@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <body>
-		  Placeholder for log tab
-    </body>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../css/logtab.css"/>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>   
+    <script src="../out/common.js"></script>    
+    <script src="../out/logtab/index.js"></script>
+  </head>
+  <body>
+    <div id="error">
+        <p>Driver Stderr</p>
+        <textarea id="driverErrorTextArea" rows="20" readonly="readonly" class="resultTextArea">error Message</textarea>
+    </div>
+    <div id="jobOutput">
+        <p>Driver Stdout</p>
+        <textarea id="jobOutputTextArea" rows="20" readonly="readonly" class="resultTextArea">Out put</textarea>
+    </div>
+    <div  id="driverLog">
+        <p>Directory Info</p>
+        <textarea id="directoryInfoTextArea" rows="20" readonly="readonly" class="resultTextArea">Driver Log</textarea>
+    </div>
+  </body>
 </html>

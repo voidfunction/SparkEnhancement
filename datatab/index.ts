@@ -90,16 +90,6 @@ class SimpleListModel {
     }
 }
 
-interface ISparkJobData {
-    inputs: Array<Array<string>>;
-    outputs: Array<Array<string>>;
-}
-
-class SparkInfo {
-    data: ISparkJobData;
-}
-
-let spark: SparkInfo = new SparkInfo();
 let isRendered: boolean = false;
 
 window.addEventListener("message", (event) => {
