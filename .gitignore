@@ -1,5 +1,4 @@
 
 node_modules/
 out/
-libraries/
-server/node_modules/
+build/

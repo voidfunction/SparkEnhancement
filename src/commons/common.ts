@@ -1,8 +1,18 @@
-/// <reference path="common.d.ts"/>
 
 var asyncMessageCounter = 0;
 
-class SparkInfo {
+export interface ISparkJobData {
+    inputs: Array<Array<string>>;
+    outputs: Array<Array<string>>;
+}
+
+interface IApplicationMasterLogs {
+    stderr: string;
+    stdout: string;
+    directoryInfo: string;
+}
+
+export class SparkInfo {
     parentOrigin: string;
     data: ISparkJobData;
     appId: string;
@@ -13,11 +23,11 @@ class SparkInfo {
     logs: IApplicationMasterLogs;
 }
 
-var spark: SparkInfo = new SparkInfo();
+export const spark: SparkInfo = new SparkInfo();
 spark.appId = 'application_1515069779315_0032';
 spark.clusterName = 'spark2withblob';
 
-function serializeQuery(queriesMap: object): string {
+export function serializeQuery(queriesMap: object): string {
     var keys = Object.keys(queriesMap);
     if (!keys || keys.length == 0) return '';
 
@@ -28,11 +38,11 @@ function serializeQuery(queriesMap: object): string {
     return result.substring(1);
 }
 
-function setBasicInfo(): void {
+export function setBasicInfo(): void {
     spark.localhost = `http://localhost:41968`;
 }
 
-function getMessageAsync(url: string, type: string, callback: (param: string) => void, appId: string): void {
+export function getMessageAsync(url: string, type: string, callback: (param: string) => void, appId: string): void {
     let queries:object = {
         'http-type': type || 'spark',
         'cluster-name': spark.clusterName || '0',
@@ -74,6 +84,3 @@ function getMessageAsync(url: string, type: string, callback: (param: string) =>
     xmlHttp.open('GET', spark.localhost + url + '?' + queryString, true);
     xmlHttp.send(null);
 }
-
-
-
