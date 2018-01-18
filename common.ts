@@ -3,6 +3,7 @@
 var asyncMessageCounter = 0;
 
 class SparkInfo {
+    parentOrigin: string;
     data: ISparkJobData;
     appId: string;
     attempId: string;
