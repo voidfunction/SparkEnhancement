@@ -4,8 +4,6 @@ import '../../resources/css/datatab.css';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../../node_modules/bootstrap/dist/css/bootstrap-theme.min.css';
 import '../../resources/css/darktheme.css';
-import '../../node_modules/datatables.net-rowreorder-bs/css/rowReorder.bootstrap.min.css';
-import '../../node_modules/datatables.net-select-bs/css/select.bootstrap.min.css';
 
 import * as path from 'path';
 import { spark } from '../commons/common';
@@ -134,13 +132,22 @@ function renderData(dataSet: Array<Array<string>>, isInput: boolean = true) {
     let tabId = isInput ? '#inputDataTab' : '#outputDataTab';
     let sortId = isInput ? 0 : 1;
     try {
-        $(tabId).DataTable({
+        $(tabId)['DataTable']({
             data: dataSet,
             order: [[sortId, "desc"]],
+            dom: 'Bfrtip',
+            buttons: [
+                'copyHtml5',
+                'excelHtml5',
+                'csvHtml5',
+                'pdfHtml5'
+            ],
+            statueSave: true,
             paging: true,
             ordering: true,
             info: false,
-            scrollX: true
+            scrollX: true,
+            responsive: true
         });
     } catch (error) {
         console.log(error);
