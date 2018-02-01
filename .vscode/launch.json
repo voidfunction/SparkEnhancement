@@ -5,10 +5,14 @@
     "version": "0.2.0",
     "configurations": [
         {
-        "type": "node",
-        "request": "launch",
-        "name": "Launch Local Web Service", 
-        "preLaunchTask": "pre-build-server",
-        "program": "${workspaceFolder}/server/out/localwebservice.js"
-    }]
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "program": "echo",
+            "args": [
+                "ok"
+            ],
+            "preLaunchTask": "watch"
+        }
+    ]
 }

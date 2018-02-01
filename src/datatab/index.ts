@@ -1,6 +1,12 @@
-/// <reference path="../node_modules/@types/knockout/index.d.ts" />
-/// <reference path="../node_modules/@types/jquery/index.d.ts" />
-/// <reference path="../node_modules/@types/angular/index.d.ts" />
+
+// import all related css styles
+import '../../resources/css/datatab.css';
+import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import '../../node_modules/bootstrap/dist/css/bootstrap-theme.min.css';
+import '../../resources/css/darktheme.css';
+
+import * as path from 'path';
+import { spark } from '../commons/common';
 
 enum DataTabButtonTye {
     Download = "download",
@@ -25,14 +31,14 @@ function getActionEnumType(type: string): DataTabButtonTye {
     }
 }
 
-class JobInput {
+export class JobInput {
     path: string;
     format: string;
     readSchema?: string;
     batched?: boolean;
 }
 
-class JobOutput {
+export class JobOutput {
     path: string;
     format: string;
     mode: string;
@@ -40,71 +46,7 @@ class JobOutput {
     provider: string;
 }
 
-class ApplicationFileInfos {
-    private inputs: Array<JobInput>;
-
-    private outputs: Array<JobOutput>;
-}
-
-class ViewModel {
-    public firstName: KnockoutObservable<string> = ko.observable("first");
-    public lastName: KnockoutObservable<string> = ko.observable("last");
-    public fullName: KnockoutComputed<string> = ko.pureComputed({
-        read: () => {
-            return this.firstName() + " " + this.lastName();
-        },
-        write: (value) => {
-            const lastSpacePos = value.lastIndexOf(" ");
-            if (lastSpacePos > 0) { // Ignore values with no space character
-                this.firstName(value.substring(0, lastSpacePos)); // Update "firstName"
-                this.lastName(value.substring(lastSpacePos + 1)); // Update "lastName"
-            }
-        },
-        owner: this
-    });
-
-    public friends = ko.observableArray(["test1", "test2"]);
-}
-
-class SimpleListModel {
-    items: KnockoutObservableArray<string>;
-    itemtoAdd: KnockoutObservable<string>;
-
-    addItem = () => {
-        if (this.itemtoAdd() !== "") {
-            this.items.push(this.itemtoAdd());
-            this.itemtoAdd("");
-        }
-    };
-
-    remove = (item) => {
-        this.items.remove(item);
-    }
-
-    constructor(items: Array<string>) {
-        this.items = ko.observableArray(items);
-        this.itemtoAdd = ko.observable("");
-    }
-    public onClick = () => {
-        alert("test");
-    }
-}
-
 let isRendered: boolean = false;
-
-window.addEventListener("message", (event) => {
-    console.log(event);
-    if (event.data.inputAndOutputs) {
-        spark.data = event.data.inputAndOutputs.data;
-        spark.parentOrigin = event.data.source;
-        renderInputAndOutput();
-    }
-});
-
-$(() => {
-    postIframeReadyMessage();
-});
-
 
 function postIframeReadyMessage() {
     const message = {
@@ -193,13 +135,13 @@ function renderData(dataSet: Array<Array<string>>, isInput: boolean = true) {
         $(tabId)['DataTable']({
             data: dataSet,
             order: [[sortId, "desc"]],
-                    dom: 'Bfrtip',
-        buttons: [
-            'copyHtml5',
-            'excelHtml5',
-            'csvHtml5',
-            'pdfHtml5'
-        ],
+            dom: 'Bfrtip',
+            buttons: [
+                'copyHtml5',
+                'excelHtml5',
+                'csvHtml5',
+                'pdfHtml5'
+            ],
             statueSave: true,
             paging: true,
             ordering: true,
@@ -213,3 +155,18 @@ function renderData(dataSet: Array<Array<string>>, isInput: boolean = true) {
 
     }
 }
+
+export function initialization() {
+    window.addEventListener("message", (event) => {
+        console.log(event);
+        if (event.data.inputAndOutputs) {
+            spark.data = event.data.inputAndOutputs.data;
+            spark.parentOrigin = event.data.source;
+            renderInputAndOutput();
+        }
+    });
+    
+    postIframeReadyMessage();
+}
+
+initialization();

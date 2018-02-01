@@ -1,7 +1,9 @@
-/// <reference path="../node_modules/@types/knockout/index.d.ts" />
-/// <reference path="../node_modules/@types/jquery/index.d.ts" />
-/// <reference path="../node_modules/@types/angular/index.d.ts" />
-/// <reference path="../common.d.ts" />
+
+// import all the related css styles
+import '../../resources/css/logtab.css';
+import '../../resources/css/darktheme.css';
+
+import {spark, setBasicInfo, getMessageAsync } from '../commons/common';
 
 setBasicInfo();
 commandBinding();

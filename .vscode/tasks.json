@@ -4,21 +4,21 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "pre-build-server",
+            "label": "watch ts file",
+            "identifier": "watch",
             "type": "shell",
-            "command": "tsc -p server",
-            "dependsOn": "htmlScriptBuild"
+            "command": "pm run watch",
+            "dependsOn": "startLocalServer",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         },
         {
-            "label": "html Script Build",
-            "identifier": "htmlScriptBuild",
+            "label": "start Local Http Server",
+            "identifier": "startLocalServer",
             "type": "shell",
-            "command": "tsc -p ."
-        }, 
-        {
-            "label": "html Script Watch",
-            "type": "shell",
-            "command": "tsc -p . -w"
+            "command": "npm run server"
         }
     ]
 }
