@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="12px" height="11px" viewBox="0 0 12 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17248) - http://www.bohemiancoding.com/sketch -->
+    <title>jobgraph-output</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Jobs" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Artboard-22" sketch:type="MSArtboardGroup" transform="translate(-162.000000, -113.000000)">
+            <g id="jobgraph-output" sketch:type="MSLayerGroup" transform="translate(162.000000, 113.000000)">
+                <path d="M9.9473756,4.92727449 L8.38447688,3.27909462 L9.65615025,3.27909462 L11.7481137,5.4282828 L9.66669957,7.56692008 L8.39502621,7.56692008 L9.9473756,5.91842048 L4.28910044,5.91842048 L4.28910044,4.92727449 L9.9473756,4.92727449 Z" id="Shape" fill="#000000" sketch:type="MSShapeGroup"></path>
+                <path d="M10.1231977,10.5154195 L0.177740169,10.5154195 L0.177740169,7.21170614 L1.59838281,7.21170614 L1.59838281,9.09424408 L8.70223539,9.09424408 L8.70223539,8.53056976 L10.1231977,8.53056976 L10.1231977,10.5154195 Z" id="Shape" fill="#000000" sketch:type="MSShapeGroup"></path>
+                <path d="M10.1231977,2.34006372 L8.70223539,2.34006372 L8.70223539,1.42085574 L1.59838281,1.42085574 L1.59838274,7.34117459 L0.177740094,7.34117459 L0.177740169,0 L10.1231977,0 L10.1231977,2.34006372 Z" id="Shape" fill="#000000" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

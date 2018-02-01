@@ -1,0 +1,192 @@
+/*Match the @formElementHeight with border into consideration. */
+/* !importants ensure that we override theming */
+/**
+ * Numbers and adornment text formatting
+ */
+.azc-graph-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: default;
+}
+.azc-graph-feedback-container {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.azc-graph-edge {
+  position: absolute;
+  fill: none;
+}
+.azc-graph-edge-marker {
+  stroke-dasharray: 1,0;
+}
+.azc-graph-edgeDraft {
+  top: 0;
+  left: 0;
+  height: 100%;
+  margin: 0;
+  border: 0;
+  position: absolute;
+  fill: none;
+}
+.azc-graph-hiddenHitTestEdge {
+  stroke: #fff;
+  /* this is necessary to make the path clickable in Firefox */
+  opacity: 0;
+  stroke-width: 12px;
+  fill: none;
+}
+.azc-graph-node {
+  position: absolute;
+}
+.azc-graph-connections-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+.azc-graph-overlay {
+  position: relative;
+  /* We set this to 0x0 and intentionally overflow. This allows transform with matrix to work properly for the child elements. */
+  height: 0;
+  width: 0;
+}
+/* This is a style control users put on their node content. This particular one will get filtered out in Ibiza, but can be used in standalone environments */
+.azc-graph-node-content {
+  border-width: 2pt;
+  stroke-width: 2pt;
+  border-style: solid;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  stroke-linejoin: round;
+  padding: 6px;
+  /* We want an invisible 2pt border, as this is what selected state uses. With this border, the content doesn't shift when not selected. */
+  stroke: transparent;
+  border-color: transparent;
+}
+.selected .azc-graph-node-content {
+  border-width: 2pt;
+  stroke-width: 2pt;
+}
+.graph-skin-style-document .selected .azc-graph-node-content,
+.graph-skin-style-document2 .selected .azc-graph-node-content,
+.graph-skin-style-document3 .selected .azc-graph-node-content {
+  border-width: 4px;
+  stroke-width: 4px;
+}
+.graph-skin-style-document2 .azc-graph-node-content,
+.graph-skin-style-document3 .azc-graph-node-content {
+  border-width: 1px;
+  stroke-width: 1px;
+}
+.azc-graph-port {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-width: 1pt;
+  stroke-width: 1pt;
+  border-style: none;
+  stroke-linejoin: round;
+  background-color: transparent;
+}
+.azc-graph-loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
+.azc-graph-loading-item {
+  display: block;
+  position: relative;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+}
+.azc-graph-node-container {
+  cursor: pointer;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  position: absolute;
+}
+.azc-graph-node-container .azc-toolbarButton-dialogContainer {
+  position: fixed;
+  left: auto;
+}
+.azc-graph-node-container-overflow {
+  cursor: pointer;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+}
+.committing .azc-graph-node-container,
+.committing .azc-graph-node-container-overflow {
+  cursor: progress;
+}
+.locked .azc-graph-node-container,
+.locked .azc-graph-node-container-overflow {
+  cursor: not-allowed;
+}
+.azc-graph-container.committing,
+.azc-graph-node-container-overflow.committing {
+  cursor: progress;
+}
+.multiSelecting .azc-graph-selection-box {
+  display: block;
+}
+.azc-graph-selection-box {
+  display: none;
+  position: absolute;
+  border-style: solid;
+  border-width: 2pt;
+  box-sizing: border-box;
+}
+.azc-graph:hover .azc-graph-horizontal-scrollbar.azc-graph-visibility-hidden,
+.azc-graph:hover .azc-graph-vertical-scrollbar.azc-graph-visibility-hidden {
+  visibility: hidden;
+}
+.azc-graph:hover .azc-graph-horizontal-scrollbar,
+.azc-graph:hover .azc-graph-vertical-scrollbar {
+  visibility: visible;
+}
+.azc-graph-horizontal-scrollbar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  visibility: hidden;
+}
+.azc-graph-vertical-scrollbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  visibility: hidden;
+}
+.azc-graph-horizontal-scroll-range {
+  /* Make the range have a non-zero height so the scrollbars appear */
+  height: 1px;
+}
+.azc-graph-vertical-scroll-range {
+  /* Make the range have a non-zero height so the scrollbars appear */
+  width: 1px;
+}
+.azc-graph-entity-dimmed {
+  opacity: 0.4;
+}

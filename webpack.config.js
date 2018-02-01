@@ -10,7 +10,8 @@ module.exports = {
     devtool: 'source-map',
     entry: {
         datatab: ['./src/datatab/index.ts'],
-        logtab: ['./src/logtab/index.ts']
+        logtab: ['./src/logtab/index.ts'],
+        graphtab: ['./src/graphtab/JobGraphViewModel.ts']
     },
     output: {
         path: path.join(__dirname, 'build'),
@@ -18,7 +19,7 @@ module.exports = {
     },
     resolve: {
         // Add '.ts' and '.tsx' as a resolvable extension.
-        extensions: ['.ts', '.tsx', '.js']
+        extensions: ['.ts', '.tsx', '.js', '.css', '.svg']
     },
     // local web service for debugging
     devServer: {
@@ -48,6 +49,14 @@ module.exports = {
             hash: true,
             chunks: ['logtab']
         }),
+        // for graph tab
+        new HtmlWebpackPlugin({
+            filename: path.join(__dirname, 'build/graphtab/index.html'),
+            template: path.join(__dirname, 'src/graphtab/index.html'),
+            inject: 'body',
+            hash: true,
+            chunks: ['graphtab']
+        }),
         new ExtractTextPlugin({
             filename: '[name].css'
         })
@@ -65,7 +74,8 @@ module.exports = {
                 })
             },
             // for resource files
-            { test: /[(\.png)|(\.eot)|(\.woff2?)]$/, loader: 'file-loader' }
+            { test: /[(\.png)|(\.eot)|(\.woff2?)]$/, loader: 'file-loader' },
+            { test: /\.svg$/,use: 'svg-loader'} 
         ]
     }
 }

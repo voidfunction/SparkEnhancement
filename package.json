@@ -13,11 +13,21 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "jquery": "^3.2.1",
-    "path": "^0.12.7"
+    "css-loader": "^0.28.9",
+    "hammerjs": "^2.0.8",
+    "jquery-ui": "^1.11.1",
+    "knockout": "3.4.1",
+    "msportalfx-mock": "^0.1.8",
+    "path": "^0.12.7",
+    "q": "^1.0.6",
+    "requirejs": "2.3.5",
+    "server": "file:server",
+    "style-loader": "^0.19.1"
   },
   "devDependencies": {
     "@types/jquery": "^3.2.18",
     "@types/knockout": "^3.4.48",
+    "@types/q": "^1.0.6",
     "css-loader": "^0.28.9",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.6",
