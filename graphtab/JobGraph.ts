@@ -23,8 +23,8 @@ export const Constants = {
     jobGraphRead: "R",
     jobGraphRowPlural : "rows",
     jobGraphRowSigular : "row",
-    jobGraphStagesPlural : "stages",
-    jobGraphStageSigular : "stage",
+    jobGraphStagesPlural : "tasks",
+    jobGraphStageSigular : "task",
     jobGraphStageReadLow : "The amount of data read by this stage is much lower than other stages in this job",
     jobGraphStageReadHigh: "The amount of data read by this stage is much higher than other stages in this job",
     jobGraphStageWriteLow: "The amount of data written by this stage is much lower than other stages in this job",
@@ -194,8 +194,8 @@ export class JobGraph {
                         //Add edges
                         for (let i = 0; i < graphContext.edges.length; i++) {
                             jobEdges.push({
-                                startNodeId: graphContext.edges[i].source,
-                                endNodeId: graphContext.edges[i].target
+                                startNodeId: "Stage " + graphContext.edges[i].source,
+                                endNodeId: "Stage " + graphContext.edges[i].target
                             });
                         }
                         this.graphLayout = {
@@ -339,8 +339,8 @@ export class JobGraph {
         for (let i = 0; i < jobJson.edges.length; i++) {
             returnValue.edges.push(<any>{
                 id: "edge" + returnValue.edges.length,
-                source: jobJson.edges[i].id,
-                target: jobJson.edges[i].childId
+                source: jobJson.edges[i].childId,
+                target: jobJson.edges[i].id
             });
         }
         return returnValue;
