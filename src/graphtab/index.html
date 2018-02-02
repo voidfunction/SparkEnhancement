@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../../resources/css/graphtab.css" />
+    <link href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css' rel='stylesheet' type='text/css'>
+    <script src="../../node_modules/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.js"></script>
+    <script src="../../node_modules/hammerjs/hammer.js"></script>
+    <script src="../../node_modules/knockout/build/output/knockout-latest.debug.js"></script>
+    <script src="../../node_modules/q/q.js"></script>
+    <script src="./Scripts/MsPortalFx/Utilities.js"></script>
+    <script src="./Scripts/MsPortalFx/Decorators.js"></script>
+    <script src="./Scripts/MsPortalFx/Base/Internal/ObservableMap.js"></script>
+    <script src="./Scripts/MsPortalFx/Services/Services.Images.js"></script>
+    <script src="./Scripts/MsPortalFx/Base/Base.Image.js"></script>
+    <script src="./Scripts/MsPortalFx/Base/Base.Disposable.js"></script>
+    <script src="./Scripts/MsPortalFx/Base/Base.Images.js"></script>
+    <script src="./Scripts/MsPortalFx/Base/Base.KnockoutExtensions.js"></script>
+    <script src="./Scripts/MsPortalFx/Base/Base.KnockoutExtensions.LifeTime.js"></script>
+    <script src="./Scripts/MsPortalFx/ViewModels/Controls/Base.js"></script>
+    <script src="./Scripts/MsPortalFx/Utilities.Internal.js"></script>
+    <script src="../../node_modules/requirejs/require.js"></script>
+</head>
+
+<body>
+    <div class="msportalfx-layoutChildren-horizontal-float ext-kona-jobProperty-container msportalfx-padding">
+        <div class="msportalfx-layoutChildren-child ext-kona-jobProperty-main">
+            <div class="ext-kona-jobProperty-graph-container">
+                <div id="toolbar" class="ext-kona-jobProperty-graph-toolbar msportalfx-layoutChildren-horizontal-float">
+                    <div data-bind="text: graphTypeLabel" class="ext-kona-jobProperty-graph-label msportalfx-layoutChildren-child"></div>
+                    <select data-bind="options: graphTypeDropDown, value: graphTypeSelected" class="ext-kona-jobProperty-graph-dropdown msportalfx-layoutChildren-child"></select>
+                    <div data-bind="text: playJobBackLabel" class="ext-kona-jobProperty-graph-label msportalfx-layoutChildren-child"></div>
+                    <div class="ext-kona-jobProperty-graph-playback msportalfx-layoutChildren-child">
+                        <a href="#" data-bind="click: playBackClick, attr: { title: toolTip, 'aria-label': toolTip }, css: {'ext-kona-disabled-link': playBackDisabled()}">
+                            <img data-bind="attr: {src: image}" style="width:16px;height:16px;">
+                        </a>
+                    </div>
+                    <div class="ext-kona-jobProperty-graph-slider msportalfx-layoutChildren-child" id="playJobBackSlider" data-bind="slider: value, sliderOptions: {min: 0, max: 300, range: 'min', step: 1}"></div>
+                    <div data-bind="text: jobTimeLabel" class="ext-kona-jobProperty-graph-label msportalfx-layoutChildren-child"></div>
+                    <div class="ext-kona-jobProperty-graph-zoomToFit msportalfx-layoutChildren-child">
+                        <a href="#" data-bind="click: zoomButtonClick, attr: { title: zoomToFitLabel, disabled: playBackDisabled }">
+                            <img data-bind="attr: { src: zoomIconUri }"></img>
+                        </a>
+                    </div>
+                    <div data-bind="text: zoomToFitLabel" class="ext-kona-float-right ext-kona-jobProperty-graph-label msportalfx-layoutChildren-child"></div>
+                </div>
+                <div id="graph" class="ext-kona-jobProperty-graph-container"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1073 @@
+/*  Error Styles */
+.ext-kona-errorText {
+    word-wrap: break-word;
+    padding-bottom: 10px;
+    margin-top: 0px;
+    overflow: auto;
+}
+
+.ext-kona-errorLabel {
+    font-weight: bold;
+    margin: 10px 0px 5px;
+}
+
+.ext-kona-errorHtml {
+    padding: 5px;
+    margin-bottom: 20px;
+    border: solid 1px;
+}
+
+.ext-mode-light .ext-kona-errorHtml {
+    background-color: rgb(228, 228, 228);
+}
+
+.ext-mode-dark .ext-kona-errorHtml {
+    background-color: rgb(72, 72, 72);
+}
+
+.ext-kona-jobError-gridLabel {
+    margin-bottom: 10px;
+}
+
+.ext-kona-error-grid-container {
+    margin-bottom: 30px;
+    max-height: 190px;
+    overflow: auto;
+}
+
+.ext-kona-error-grid-lineNumber {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Chart Styles */
+.ext-kona-chart {
+    height: calc(100% - 24px);
+}
+
+/* Job Property Styles */
+.ext-kona-jobProperty-row {
+    clear: both;
+    width: 100%;
+    height: 24px;
+}
+
+.ext-kona-jobProperty-value {
+    width: 60%;
+    vertical-align: middle;
+    float: right;
+    font-weight: bold;
+    margin-top: 4px;
+}
+
+.ext-kona-jobProperty-name {
+    width: 40%;
+    color: #767676;
+    vertical-align: middle;
+    float: left;
+    margin-top: 4px;
+}
+
+.ext-kona-jobProperty-progress-bar-icon {
+    height: 32px;
+    width: 36px;
+    border-radius: 20px;
+    font-size: 19px;
+    text-align: center;
+    padding-top: 4px;
+    color: white;
+    font-weight: bold;
+    margin-left: 24px;
+}
+
+.ext-kona-jobProperty-progress-bar-icon-none {
+    height: 28px;
+    width: 32px;
+    border: 2px solid;
+    margin-bottom: 2px;
+}
+
+.ext-kona-jobProperty-status-color-none {
+}
+
+.ext-kona-jobProperty-status-color-paused {
+    color: #ff8c00;
+}
+
+.ext-kona-jobProperty-status-color-error {
+    color: #E81123;
+}
+
+.ext-mode-light .ext-kona-jobProperty-status-color-canceled {
+    color: #666;
+}
+
+.ext-mode-dark .ext-kona-jobProperty-status-color-canceled {
+    color: #bbb;
+}
+
+.ext-kona-jobProperty-status-color-complete {
+    color: #7FBA00;
+}
+
+.ext-kona-jobProperty-status-color-active {
+    color: #0072C6;
+}
+
+.ext-kona-jobProperty-progress-bar-icon-paused {
+    font-size: 17px;
+    padding-top: 4px;
+    background-color: #ff8c00;
+}
+
+.ext-kona-jobProperty-progress-bar-icon-error {
+    background-color: #E81123;
+    margin-bottom: 2px;
+}
+
+.ext-mode-light .ext-kona-jobProperty-progress-bar-icon-canceled {
+    background-color: #666;
+}
+
+.ext-mode-dark .ext-kona-jobProperty-progress-bar-icon-canceled {
+    background-color: #bbb;
+}
+
+.ext-kona-jobProperty-progress-bar-icon-complete {
+    background-color: #7FBA00;
+}
+
+.ext-kona-jobProperty-progress-bar-icon-active {
+    font-weight: normal;
+    background-color: #0072C6;
+}
+
+.ext-kona-jobProperty-progress-bar-icon-rotate-alpha {
+    transform: rotate(0deg);
+}
+
+.ext-kona-jobProperty-progress-bar-icon-rotate-bravo {
+    transform: rotate(18deg);
+}
+
+.ext-kona-jobProperty-progress-bar-icon-rotate-charlie {
+    transform: rotate(36deg);
+}
+
+.ext-kona-jobProperty-progress-bar-icon-rotate-delta {
+    transform: rotate(54deg);
+}
+
+.ext-kona-jobProperty-progress-bar-icon-rotate-echo {
+    transform: rotate(72deg);
+}
+
+.ext-kona-jobProperty-progress-bar-icon-rotate-foxtrot {
+    transform: rotate(90deg);
+}
+
+.ext-kona-jobProperty-progress-bar-icon-rotate-golf {
+    transform: rotate(108deg);
+}
+
+.ext-kona-jobProperty-progress-bar-icon-rotate-hotel {
+    transform: rotate(126deg);
+}
+
+.ext-kona-jobProperty-progress-bar-icon-rotate-india {
+    transform: rotate(144deg);
+}
+
+.ext-kona-jobProperty-progress-bar-icon-rotate-juliett {
+    transform: rotate(162deg);
+}
+
+.ext-kona-jobProperty-progress-bar-icon-rotate-kilo {
+    transform: rotate(180deg);
+}
+
+.ext-kona-jobProperty-progress-bar-icon-rotate-lima {
+    transform: rotate(198deg);
+}
+
+.ext-kona-jobProperty-progress-bar-icon-rotate-november {
+    transform: rotate(216deg);
+}
+
+.ext-kona-jobProperty-progress-bar-icon-rotate-oscar {
+    transform: rotate(234deg);
+}
+
+.ext-kona-jobProperty-progress-bar-icon-rotate-papa {
+    transform: rotate(252deg);
+}
+
+.ext-kona-jobProperty-progress-bar-icon-rotate-quebec {
+    transform: rotate(270deg);
+}
+
+.ext-kona-jobProperty-progress-bar-icon-rotate-romeo {
+    transform: rotate(288deg);
+}
+
+.ext-kona-jobProperty-progress-bar-icon-rotate-sierra {
+    transform: rotate(306deg);
+}
+
+.ext-kona-jobProperty-progress-bar-icon-rotate-tango {
+    transform: rotate(324deg);
+}
+
+.ext-kona-jobProperty-progress-bar-icon-rotate-uniform {
+    transform: rotate(342deg);
+}
+
+.ext-kona-jobProperty-progress-bar-divider {
+    position: absolute;
+    width: 46px;
+    height: 2px;
+    margin-top: 18px;
+    border: 1px solid;
+}
+
+.ext-kona-jobProperty-progress-bar-divider-first {
+    left: 60px;
+}
+
+.ext-kona-jobProperty-progress-bar-divider-second {
+    left: 142px;
+}
+
+.ext-kona-jobProperty-progress-bar-divider-third {
+    left: 224px;
+}
+
+.ext-kona-jobProperty-progress-bar-text {
+    position: relative;
+    font-size: 10px;
+}
+
+.ext-kona-jobProperty-progress-bar-textLine {
+    text-align: center;
+    width: 82px;
+}
+
+.ext-kona-jobProperty-progress {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.ext-kona-jobProperty-container {
+    height: 100%;
+    min-height: 500px;
+}
+
+.ext-kona-jobProperty-properties {
+    width: 349px;
+    height: 100%;
+    position: relative;
+    margin-right: 10px;
+    padding-right: 20px;
+}
+
+.ext-kona-jobProperty-collapser {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 18px;
+    padding: 0px;
+    border: none;
+    border-right: 1px solid;
+    cursor: pointer;
+}
+
+.ext-kona-jobProperty-collapserIcon {
+    position: absolute;
+    top: 1px;
+    right: 2px;
+    height: 13px;
+    width: 13px;
+}
+
+.ext-kona-jobProperty-main {
+    width: calc(100% - 396px);
+    height: calc(100% - 73px);
+}
+
+.ext-kona-jobProperty-graph-container {
+    top: 43px;
+    min-height: 500px;
+    height: calc(100% - 135px);
+    width: 100%;
+    position: absolute;
+}
+
+.ext-kona-jobProperty-container.ext-kona-jobProperty-properties-collapsed .ext-kona-jobProperty-properties {
+    width: 18px;
+    margin-left: -18px;
+}
+
+.ext-kona-jobProperty-container.ext-kona-jobProperty-properties-collapsed .ext-kona-jobProperty-main {
+    width: calc(100% - 49px);
+}
+
+.ext-kona-jobProperty-container.ext-kona-jobProperty-properties-collapsed .ext-kona-jobProperty-graph-container {
+    width: calc(100% - 99px);
+}
+
+.ext-kona-jobProperty-divider {
+    width: 100%;
+    margin: 10px 0px;
+}
+
+/* Job Graph Styles */
+
+/*graph_controls*/
+.ext-kona-jobProperty-graph-zoomToFit {
+    display: inline-block;
+    border: none;
+    padding: 3px 0px 5px 0px;
+    float: right;
+}
+
+.ext-kona-jobProperty-graph-dropdown {
+    display: inline-block;
+    width: 200px;
+    margin-right: 20px;
+}
+
+.ext-kona-jobProperty-graph-playback {
+    display: inline-block;
+    border: none;
+    /* Set negative margin on the left to compensate the white space inside the image itself */
+    margin: 0px 0px 0px -3px;
+    padding: 4px 0px 0px 0px;
+}
+
+/*graph_nodes*/
+.ext-kona-jobProperty-graph-node-info-header {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ext-kona-jobProperty-graph-node-info-image {
+    float: left;
+    width: 25px;
+    height: 25px;
+    margin: 5px 5px 5px 0px;
+}
+
+.ext-kona-jobProperty-graph-node-info-title {
+    float: left;
+    margin-top: 12px;
+    height: 32px;
+    text-align: center;
+}
+
+.ext-kona-jobProperty-graph-node-info-message {
+    text-align: center;
+}
+
+.ext-kona-jobProperty-graph-node-info-title-loading {
+    margin-top: 15px;
+    height: 32px;
+    text-align: center;
+}
+
+.ext-kona-jobProperty-graph-node-info-image-loading {
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ext-kona-jobProperty-graph-toolbar {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.ext-mode-light .ext-kona-jobProperty-graph-node-resource {
+    border: 1px solid black;
+}
+
+.ext-mode-dark .ext-kona-jobProperty-graph-node-resource {
+    border: 1px solid white;
+}
+
+.ext-kona-jobProperty-graph-node-resource {
+    padding: 5px;
+}
+
+.ext-kona-jobProperty-graph-node-resource-image {
+    padding-top: 3px;
+    padding-left: 3px;
+    padding-bottom: 10px;
+    height: 22px;
+    width: 22px;
+    float: left;
+}
+
+.ext-kona-jobProperty-graph-node-resource-name {
+    padding-top: 2px;
+    padding-left: 5px;
+    height: 20px;
+    width: 176px;
+    float: left;
+    overflow: hidden;
+}
+
+.ext-kona-jobProperty-graph-node-resource-size {
+    margin-top: -2px;
+    padding-left: 5px;
+    height: 20px;
+    float: left;
+    overflow: hidden;
+}
+
+.ext-mode-dark .ext-kona-jobProperty-graph-node-process {
+    border-color: #FFFFFF;
+}
+
+.ext-mode-light .ext-kona-jobProperty-graph-node-process {
+    border-color: #000000;
+}
+
+.ext-mode-dark .ext-kona-job-failed {
+    border-color: #E22028;
+}
+
+.ext-mode-light .ext-kona-job-failed {
+    border-color: #E22028;
+}
+
+.ext-mode-dark .ext-kona-job-tagged {
+    border-color: #F5A720;
+}
+
+.ext-mode-light .ext-kona-job-tagged {
+    border-color: #F5A720;
+}
+
+.ext-kona-jobProperty-graph-node-process {
+    padding: 2px 0px 0px 0px;
+    border: 1px solid;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.ext-mode-light .ext-kona-node-selected {
+    border: 2px solid;
+    border-color: #5490CC;
+}
+
+.ext-mode-dark .ext-kona-node-selected {
+    border: 2px solid;
+    border-color: #5490CC;
+}
+
+.ext-kona-jobProperty-graph-node-process-tag {
+    background-color: #F5A720;
+}
+
+.ext-kona-job-failed .ext-kona-jobProperty-graph-node-process-tag {
+    background-color: #E22028;
+}
+
+.ext-kona-node-selected .ext-kona-jobProperty-graph-node-process-tag {
+    left: 179px;
+    top: 2px;
+}
+
+.ext-kona-jobProperty-graph-node-process-tag {
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    border-radius: 10px;
+    width: 10px;
+    height: 10px;
+    left: 180px;
+    top: 3px;
+    position: absolute;
+    font-size: 65%;
+    text-align: center;
+}
+
+.ext-kona-node-selected .ext-kona-jobProperty-graph-node-process-udo-tag {
+    left: 161px;
+    top: -1px;
+}
+
+.ext-kona-jobProperty-graph-node-process-udo-tag {
+    width: 14px;
+    height: 14px;
+    left: 162px;
+    top: 0px;
+    position: absolute;
+    font-size: 85%;
+    text-align: center;
+}
+
+.ext-mode-light .ext-kona-jobProperty-graph-node-process-background-container {
+    border-bottom: 1px solid black;
+}
+
+.ext-mode-dark .ext-kona-jobProperty-graph-node-process-background-container {
+    border-bottom: 1px solid white;
+}
+
+.ext-kona-node-selected .ext-kona-jobProperty-graph-node-process-background-container {
+    height: 80px;
+    width: 196px;
+}
+
+.ext-kona-jobProperty-graph-node-process-background-container {
+    height: 81px;
+    width: 198px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+
+.ext-kona-jobProperty-graph-node-process-footer {
+    height: 20px;
+    width: 198px;
+    position: absolute;
+    top: 84px;
+    font-size: 12px;
+}
+
+.ext-kona-node-selected .ext-kona-jobProperty-graph-node-process-footer {
+    height: 19px;
+    width: 196px;
+    top: 83px;
+}
+
+    .ext-kona-node-selected .ext-kona-jobProperty-graph-node-process-footer .ext-kona-jobProperty-graph-node-process-row-left-cell {
+        left: 2px;
+    }
+
+    .ext-kona-node-selected .ext-kona-jobProperty-graph-node-process-footer .ext-kona-jobProperty-graph-node-process-row-right-cell {
+        right: 2px;
+    }
+
+.ext-kona-jobProperty-graph-node-process-footer .ext-kona-jobProperty-graph-node-process-row-left-cell {
+    text-align: left;
+    position: absolute;
+    left: 3px;
+}
+
+.ext-kona-jobProperty-graph-node-process-footer .ext-kona-jobProperty-graph-node-process-row-right-cell {
+    text-align: right;
+    font-weight: bold;
+    position: absolute;
+    right: 3px;
+    font-size: 90%;
+}
+
+.ext-mode-light .ext-kona-jobProperty-graph-node-process-percent-bar-success {
+    background-color: #7AC14E;
+}
+
+.ext-mode-dark .ext-kona-jobProperty-graph-node-process-percent-bar-success {
+    background-color: #2F843F;
+}
+
+.ext-kona-jobProperty-graph-node-process-percent-bar-success {
+    float: left;
+    height: 100%;
+}
+
+.ext-mode-light .ext-kona-job-failed .ext-kona-jobProperty-graph-node-process-percent-bar-fail {
+    background-color: #E22028;
+}
+
+.ext-mode-dark .ext-kona-job-failed .ext-kona-jobProperty-graph-node-process-percent-bar-fail {
+    background-color: #AD1F2B;
+}
+
+.ext-mode-light .ext-kona-jobProperty-graph-node-process-percent-bar-fail {
+    background-color: #F5A720;
+}
+
+.ext-mode-dark .ext-kona-jobProperty-graph-node-process-percent-bar-fail {
+    background-color: #A36729;
+}
+
+.ext-kona-jobProperty-graph-node-process-percent-bar-fail {
+    float: left;
+    height: 100%;
+}
+
+.ext-mode-light .ext-kona-jobProperty-graph-node-process-percent-bar-progress {
+    background-color: #6FCCDD;
+}
+
+.ext-mode-dark .ext-kona-jobProperty-graph-node-process-percent-bar-progress {
+    background-color: #3A617C;
+}
+
+.ext-kona-jobProperty-graph-node-process-percent-bar-progress {
+    float: left;
+    height: 100%;
+}
+
+.ext-mode-light .ext-kona-jobProperty-graph-node-process-percent-bar-none {
+    background-color: #FFFFFF;
+}
+
+.ext-mode-dark .ext-kona-jobProperty-graph-node-process-percent-bar-none {
+    background-color: #444444;
+}
+
+.ext-kona-jobProperty-graph-node-process-percent-bar-none {
+    float: left;
+    height: 100%;
+}
+
+.ext-mode-light .ext-kona-heatmap-three-above {
+    background-color: #F36F21;
+}
+
+.ext-mode-dark .ext-kona-heatmap-three-above {
+    background-color: #72401C;
+}
+
+.ext-mode-light .ext-kona-heatmap-two-above {
+    background-color: #F5A720;
+}
+
+.ext-mode-dark .ext-kona-heatmap-two-above {
+    background-color: #8E5726;
+}
+
+.ext-mode-light .ext-kona-heatmap-one-above {
+    background-color: #EAC68B;
+}
+
+.ext-mode-dark .ext-kona-heatmap-one-above {
+    background-color: #AA894F;
+}
+
+.ext-mode-light .ext-kona-heatmap-average {
+    background-color: #B5B5B5;
+}
+
+.ext-mode-dark .ext-kona-heatmap-average {
+    background-color: #666666;
+}
+
+.ext-mode-light .ext-kona-heatmap-one-below {
+    background-color: #CADEF3;
+}
+
+.ext-mode-dark .ext-kona-heatmap-one-below {
+    background-color: #5C7199;
+}
+
+.ext-mode-light .ext-kona-heatmap-two-below {
+    background-color: #CADEF3;
+}
+
+.ext-mode-dark .ext-kona-heatmap-two-below {
+    background-color: #364E6F;
+}
+
+.ext-mode-light .ext-kona-heatmap-three-below {
+    background-color: #5CADE0;
+}
+
+.ext-mode-dark .ext-kona-heatmap-three-below {
+    background-color: #293955;
+}
+
+.ext-kona-jobProperty-graph-node-process-percent-bar-heatmap {
+    float: left;
+    height: 100%;
+    width: 100%;
+}
+
+.ext-kona-node-selected .ext-kona-jobProperty-graph-node-process-row {
+    position: relative;
+    width: 197px;
+    height: 20px;
+    padding: 0px 0px 0px 3px;
+    left: -1px;
+    top: -1px;
+}
+
+.ext-kona-jobProperty-graph-node-process-row {
+    position: relative;
+    width: 197px;
+    height: 20px;
+    padding: 0px 0px 0px 3px;
+}
+
+.ext-kona-jobProperty-graph-node-process-row-left-cell {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+.ext-kona-jobProperty-graph-node-process-row-right-cell {
+    float: right;
+    width: 50%;
+    height: 100%;
+}
+
+.ext-kona-jobProperty-graph-node-process-row-only-cell {
+    width: 100%;
+    height: 100%;
+}
+
+.ext-mode-dark .ext-kona-jobProperty-graph-node-process-image-label {
+    display: none;
+}
+
+.ext-kona-jobProperty-graph-node-process-image-label {
+    width: 14px;
+    height: 13px;
+    float: left;
+    margin: 3px;
+}
+
+.ext-kona-jobProperty-graph-playback-image {
+    width: 15px;
+    height: 19px;
+}
+
+.ext-kona-jobProperty-graph-slider {
+    display: inline-block;
+    width: 220px;
+    margin: 0px 5px;
+}
+
+.ext-kona-jobProperty-graph-label {
+    display: inline-block;
+    border: none;
+    width: auto;
+    padding: 3px 0px 5px 0px;
+    margin-right: 5px;
+}
+
+.ext-mode-light .ext-kona-jobProperty-graph-node-process-image-label-dark {
+    display: none;
+}
+
+.ext-kona-jobProperty-graph-node-process-image-label-dark {
+    width: 14px;
+    height: 13px;
+    float: left;
+    margin: 3px;
+}
+
+.ext-kona-jobProperty-graph-node-process-text-label {
+    padding-top: 1px;
+    padding-left: 17px;
+    width: calc(100% - 17px);
+    height: 15px;
+    font-size: 12px;
+}
+
+.ext-kona-job-debug-overlay {
+    position: absolute;
+    width: calc(100% - 425px);
+    height: calc(100% - 280px);
+    left: 376px;
+    margin-top: 26px;
+    padding-top: 200px;
+    background-color: rgba(190, 190, 190, .5);
+}
+
+.ext-kona-system-error {
+    clear: both;
+    height: 35px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.ext-kona-system-error-icon-container {
+    float: left;
+    width: 35px;
+    height: 35px;
+}
+
+.ext-kona-subway-text {
+    font-weight: bold;
+    padding: 0px 1px;
+    padding-top: 1px;
+}
+
+.ext-kona-system-error-icon {
+    margin-top: 8px;
+    margin-left: 8px;
+    width: 18px;
+    height: 18px;
+}
+
+.ext-kona-system-system-error {
+    font-weight: bolder;
+    font-size: 14px;
+    margin-top: 8px;
+    margin-left: 10px;
+    float: left;
+}
+
+.ext-kona-system-error-link {
+    text-align: left;
+    margin-top: 10px;
+    margin-right: 10px;
+    float: right;
+}
+
+.ext-kona-vertex-failed {
+    margin: 20px 0px;
+}
+
+.ext-kona-vertex-failed-header {
+    margin: 5px 0px;
+    font-size: 18px;
+}
+
+.ext-kona-vertex-failed-message {
+    margin: 5px 0px;
+}
+
+.ext-mode-light .ext-kona-border {
+    border-color: #bbb;
+}
+
+.ext-mode-dark .ext-kona-border {
+    border-color: #666;
+}
+
+/* Put space between each control. */
+.ext-kona-control {
+    margin: 16px 0px;
+}
+
+.ext-kona-control:first-child {
+    margin-top: 0px;
+}
+
+.ext-kona-inline-name-text {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 3px;
+    width: calc(100% - 16px);
+}
+
+.ext-kona-inline-image-small {
+    width: 14px;
+    height: 14px;
+    margin: 0px;
+    padding: 0px 2px 0px 2px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.ext-kona-float-right {
+    float: right;
+}
+
+.ext-kona-disabled-link {
+    cursor: default;
+}
+
+/*Match the @formElementHeight with border into consideration. */
+/* !importants ensure that we override theming */
+/**
+ * Numbers and adornment text formatting
+ */
+ .azc-graph-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    cursor: default;
+  }
+  .azc-graph-feedback-container {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .azc-graph-edge {
+    position: absolute;
+    fill: none;
+  }
+  .azc-graph-edge-marker {
+    stroke-dasharray: 1,0;
+  }
+  .azc-graph-edgeDraft {
+    top: 0;
+    left: 0;
+    height: 100%;
+    margin: 0;
+    border: 0;
+    position: absolute;
+    fill: none;
+  }
+  .azc-graph-hiddenHitTestEdge {
+    stroke: #fff;
+    /* this is necessary to make the path clickable in Firefox */
+    opacity: 0;
+    stroke-width: 12px;
+    fill: none;
+  }
+  .azc-graph-node {
+    position: absolute;
+  }
+  .azc-graph-connections-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+  }
+  .azc-graph-overlay {
+    position: relative;
+    /* We set this to 0x0 and intentionally overflow. This allows transform with matrix to work properly for the child elements. */
+    height: 0;
+    width: 0;
+  }
+  /* This is a style control users put on their node content. This particular one will get filtered out in Ibiza, but can be used in standalone environments */
+  .azc-graph-node-content {
+    border-width: 2pt;
+    stroke-width: 2pt;
+    border-style: solid;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    stroke-linejoin: round;
+    padding: 6px;
+    /* We want an invisible 2pt border, as this is what selected state uses. With this border, the content doesn't shift when not selected. */
+    stroke: transparent;
+    border-color: transparent;
+  }
+  .selected .azc-graph-node-content {
+    border-width: 2pt;
+    stroke-width: 2pt;
+  }
+  .graph-skin-style-document .selected .azc-graph-node-content,
+  .graph-skin-style-document2 .selected .azc-graph-node-content,
+  .graph-skin-style-document3 .selected .azc-graph-node-content {
+    border-width: 4px;
+    stroke-width: 4px;
+  }
+  .graph-skin-style-document2 .azc-graph-node-content,
+  .graph-skin-style-document3 .azc-graph-node-content {
+    border-width: 1px;
+    stroke-width: 1px;
+  }
+  .azc-graph-port {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-width: 1pt;
+    stroke-width: 1pt;
+    border-style: none;
+    stroke-linejoin: round;
+    background-color: transparent;
+  }
+  .azc-graph-loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+  }
+  .azc-graph-loading-item {
+    display: block;
+    position: relative;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+  }
+  .azc-graph-node-container {
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    position: absolute;
+  }
+  .azc-graph-node-container .azc-toolbarButton-dialogContainer {
+    position: fixed;
+    left: auto;
+  }
+  .azc-graph-node-container-overflow {
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+  }
+  .committing .azc-graph-node-container,
+  .committing .azc-graph-node-container-overflow {
+    cursor: progress;
+  }
+  .locked .azc-graph-node-container,
+  .locked .azc-graph-node-container-overflow {
+    cursor: not-allowed;
+  }
+  .azc-graph-container.committing,
+  .azc-graph-node-container-overflow.committing {
+    cursor: progress;
+  }
+  .multiSelecting .azc-graph-selection-box {
+    display: block;
+  }
+  .azc-graph-selection-box {
+    display: none;
+    position: absolute;
+    border-style: solid;
+    border-width: 2pt;
+    box-sizing: border-box;
+  }
+  .azc-graph:hover .azc-graph-horizontal-scrollbar.azc-graph-visibility-hidden,
+  .azc-graph:hover .azc-graph-vertical-scrollbar.azc-graph-visibility-hidden {
+    visibility: hidden;
+  }
+  .azc-graph:hover .azc-graph-horizontal-scrollbar,
+  .azc-graph:hover .azc-graph-vertical-scrollbar {
+    visibility: visible;
+  }
+  .azc-graph-horizontal-scrollbar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    visibility: hidden;
+  }
+  .azc-graph-vertical-scrollbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    visibility: hidden;
+  }
+  .azc-graph-horizontal-scroll-range {
+    /* Make the range have a non-zero height so the scrollbars appear */
+    height: 1px;
+  }
+  .azc-graph-vertical-scroll-range {
+    /* Make the range have a non-zero height so the scrollbars appear */
+    width: 1px;
+  }
+  .azc-graph-entity-dimmed {
+    opacity: 0.4;
+  }
+  
