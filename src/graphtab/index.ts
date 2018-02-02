@@ -1,4 +1,4 @@
-/// <reference path="../node_modules/@types/knockout/index.d.ts" />
+/// <reference path="../../node_modules/@types/knockout/index.d.ts" />
 import {JobGraph, Constants, JobStageData, JobGraphData, JobStageProcessStage, JobGraphState, InfoNodeViewModel, InfoNode} from "./JobGraph";
 import ViewModel = require("./Scripts/Viva.Controls/Controls/Visualization/Graph/GraphViewModel");
 import Entities = require("./Scripts/Viva.Controls/Controls/Visualization/Graph/GraphEntityViewModel");
@@ -147,8 +147,8 @@ class JobGraphDetailsViewModel
         this.graphTypeSelected = ko.observable("");
         let timeoutPointer: number = null;
         this.toolTip = ko.observable("Start playback");
-        this.zoomIconUri = ko.observable("../svg/FitToScreen.svg");
-        this.image = ko.observable("../svg/Start.svg");
+        this.zoomIconUri = ko.observable("../../resources/svg/FitToScreen.svg");
+        this.image = ko.observable("../../resources/svg/Start.svg");
         this.jobTimeLabel = ko.observable(this._jobGraph.getPlaybackSimulationTime());
         this.graphLoadingComplete = ko.observable(false);
         this.playBackDisabled = ko.observable(true);
@@ -183,12 +183,12 @@ class JobGraphDetailsViewModel
     }
 
     public play(): void {
-        this.image("../svg/Stop.svg");
+        this.image("../../resources/svg/Stop.svg");
         this.toolTip("Stop playback");
     }
 
     public pause(): void {
-        this.image("../svg/Start.svg");
+        this.image("../../resources/svg/Start.svg");
         this.toolTip("Start playback");
     }
 }
@@ -221,7 +221,7 @@ ko.bindingHandlers.slider = {
 
 let newTheme: MsPortalFx.Base.Themes.Theme = {
     colorCode: "#333",
-    imageUri: "../svg/MsPortalImpl/Themes/Theme_Light.png",
+    imageUri: "../../resources/svg/MsPortalImpl/Themes/Theme_Light.png",
     mode: 1,
     name: "light",
     title: "Light"

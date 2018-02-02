@@ -1,4 +1,4 @@
-/// <reference path="../node_modules/@types/q/index.d.ts" />
+/// <reference path="../../node_modules/@types/q/index.d.ts" />
 import GraphEntitiesAddition = require("./Scripts/Viva.Controls/Controls/Visualization/Graph/GraphEntitiesAddition");
 import Entities = require("./Scripts/Viva.Controls/Controls/Visualization/Graph/GraphEntityViewModel");
 import { INode as Node, IEdge as Edge, GShape, GGraph } from "./Ggraph";
@@ -7,17 +7,17 @@ import { totalmem } from "os";
 
 export const Constants = {
     Icons : {
-        graphVertexUri: "../svg/jobgraph-vertices.svg",
-        graphTimeUri: "../svg/jobgraph-clock.svg",
-        graphRowsUri: "../svg/jobgraph-rows.svg",
-        graphReadUri: "../svg/jobgraph-input.svg",
-        graphWriteUri: "../svg/jobgraph-output.svg",
-        graphVertexUriDark: "../svg/jobgraph-vertices-dark.svg",
-        graphTimeUriDark: "../svg/jobgraph-clock-dark.svg",
-        graphRowsUriDark: "../svg/jobgraph-rows-dark.svg",
-        graphReadUriDark: "../svg/jobgraph-input-dark.svg",
-        graphWriteUriDark: "../svg/jobgraph-output-dark.svg",
-        zoomToFitUri: "../svg/FitToScreen.svg"
+        graphVertexUri: "../../resources/svg/jobgraph-vertices.svg",
+        graphTimeUri: "../../resources/svg/jobgraph-clock.svg",
+        graphRowsUri: "../../resources/svg/jobgraph-rows.svg",
+        graphReadUri: "../../resources/svg/jobgraph-input.svg",
+        graphWriteUri: "../../resources/svg/jobgraph-output.svg",
+        graphVertexUriDark: "../../resources/svg/jobgraph-vertices-dark.svg",
+        graphTimeUriDark: "../../resources/svg/jobgraph-clock-dark.svg",
+        graphRowsUriDark: "../../resources/svg/jobgraph-rows-dark.svg",
+        graphReadUriDark: "../../resources/svg/jobgraph-input-dark.svg",
+        graphWriteUriDark: "../../resources/svg/jobgraph-output-dark.svg",
+        zoomToFitUri: "../../resources/svg/FitToScreen.svg"
     },
     noValue: "N/A",
     jobGraphRead: "R",

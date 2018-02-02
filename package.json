@@ -17,11 +17,9 @@
     "hammerjs": "^2.0.8",
     "jquery-ui": "^1.11.1",
     "knockout": "3.4.1",
-    "msportalfx-mock": "^0.1.8",
     "path": "^0.12.7",
     "q": "^1.0.6",
     "requirejs": "2.3.5",
-    "server": "file:server",
     "style-loader": "^0.19.1"
   },
   "devDependencies": {
@@ -29,6 +27,7 @@
     "@types/knockout": "^3.4.48",
     "@types/q": "^1.0.6",
     "css-loader": "^0.28.9",
+    "svg-loader": "0.0.2",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.6",
     "html-webpack-plugin": "^2.30.1",

@@ -11,7 +11,7 @@ module.exports = {
     entry: {
         datatab: ['./src/datatab/index.ts'],
         logtab: ['./src/logtab/index.ts'],
-        graphtab: ['./src/graphtab/JobGraphViewModel.ts']
+        graphtab: ['./src/graphtab/index.ts']
     },
     output: {
         path: path.join(__dirname, 'build'),
